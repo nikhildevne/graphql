@@ -8,23 +8,11 @@ phases:
       - echo "Installing dependencies"
       - npm install
 
+  pre_build:
+    commands:
+      - echo "Pre-build step"
+
   build:
     commands:
       - echo "Building the application"
       - npm run build --if-present
-      - echo "Listing build directory contents"
-      - ls -la build # Ensure that the build directory is created and populated
-
-  post_build:
-    commands:
-      - echo "Build completed"
-
-artifacts:
-  files:
-    - build/**  # Adjust this if your output directory is different
-  base-directory: build # Specify the base directory for artifacts
-
-# Optional: You can also specify cache paths to speed up the build process
-cache:
-  paths:
-    - node_modules/** # Cache node_modules to avoid reinstalling dependencies
