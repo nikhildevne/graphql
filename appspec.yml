@@ -2,25 +2,25 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /var/www/my-nodejs-app
+    destination: /home/ec2-user/my-node-app
 
 hooks:
   BeforeInstall:
     - location: scripts/cleanup.sh
       timeout: 300
-      runas: root
+      runas: ec2-user
 
   AfterInstall:
     - location: scripts/check_and_run.sh
       timeout: 300
-      runas: root
+      runas: ec2-user
 
   ApplicationStart:
     - location: scripts/start_app.sh
       timeout: 300
-      runas: root
+      runas: ec2-user
 
   ApplicationStop:
     - location: scripts/stop_app.sh
       timeout: 300
-      runas: root
+      runas: ec2-user
