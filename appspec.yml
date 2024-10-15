@@ -2,17 +2,25 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/ec2-user/nodeapp
+    destination: /home/ec2-user/my-nodejs-app  # Adjust this to your desired destination directory
+
 hooks:
-  ApplicationStop:
-    - location: script/application_stop.sh
-      timeout: 300
-      runas: ec2-user
   BeforeInstall:
-    - location: script/before_install.sh
+    - location: scripts/install_dependencies.sh
       timeout: 300
       runas: ec2-user
+  
+  AfterInstall:
+    - location: scripts/start_server.sh
+      timeout: 300
+      runas: ec2-user
+  
   ApplicationStart:
-    - location: script/application_start.sh
+    - location: scripts/health_check.sh
+      timeout: 300
+      runas: ec2-user
+
+  ApplicationStop:
+    - location: scripts/stop_server.sh
       timeout: 300
       runas: ec2-user
