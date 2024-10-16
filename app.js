@@ -1,17 +1,21 @@
+// app.js
 const express = require('express');
-const path = require('path');
+const exphbs = require('express-handlebars');
+
 const app = express();
 const port = 3000;
 
-// Serve static files from the "public" directory
-app.use(express.static(path.join(__dirname, 'public')));
+// Set up Handlebars as the view engine
+app.engine('handlebars', exphbs.engine());
+app.set('view engine', 'handlebars');
+app.set('views', './views');
 
-// Serve index.html on the root route
+// Define a route to render the Handlebars template
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    res.render('home', { title: 'My Handlebars App', message: 'Welcome to Handlebars!' });
 });
 
 // Start the server
 app.listen(port, () => {
-  console.log(`Server is running at http://localhost:${port}`);
+    console.log(`Server is running on http://localhost:${port}`);
 });
