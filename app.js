@@ -126,6 +126,7 @@ const templ = `<html lang="en">
             <li><strong>Redux Tollkit</strong></li>
             <li><strong>Node.js</strong></li>
             <li><strong>Express.js</strong></li>
+            <li>Jquery</li>
             <li><strong>MongoDB</strong></li>
             <li><strong>AWS EC2, CodeDeploy, CodePipeline, Elastic Beanstalk, IAM</strong></li>
             <li><strong>AWS S3, Cognito, SNS, SES</strong></li>
