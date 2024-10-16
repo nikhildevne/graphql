@@ -96,7 +96,7 @@ const templ = `<!DOCTYPE html>
 </html>
 `
 app.get('/',(req,res)=>{
-    res.send('hello')
+    res.send(templ)
 })
 
 app.listen(port,()=>{
