@@ -58,7 +58,7 @@ const templ = `<html lang="en">
     <h1>Resume - Nikhil Nandkumar Devne</h1>
     <div class="contact-info">
         <p>Email: nikhildevne@yahoo.com</p>
-        <p>Phone: +91 9175669865</p>
+        <p>Phone: 9175669865</p>
         <p>Address: Baner, Pune Maharashtra</p>
     </div>
 
