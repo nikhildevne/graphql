@@ -95,7 +95,7 @@ const templ = `<html lang="en">
                     <li>Implemented secure login and Registration System using AWS Cognito Service.</li>
                     <li>Developed Real-time communication system to send Notifications to user using Socket.io.</li>
                     <li>Familiar with Agile Software Development process.</li>
-                    <li>Familiar with Monolithic and Microservice Architecture</li>
+                    <li>Familiar with Monolithic and Microservice Architecture.</li>
                     <li>Hands on Experience in Event Driven and Asynchronous Programming in Nodejs.</li>
                     <li>Familiar with AWS CI/CD Services such as AWS Codepipeline, Codebuild, Codedeploy, IAM.</li>
                     <li>Developed User Interface Using Reactjs, Redux for Single Page Application Development.</li>
