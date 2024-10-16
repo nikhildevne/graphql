@@ -1,11 +1,11 @@
-const express = require('express')
-const app = express()
+const express = require('express');
+const app = express();
+const PORT = process.env.PORT || 3000;
 
-app.listen(3000,()=>{
-    console.log('working on 3000')
-})
+app.get('/', (req, res) => {
+    res.send('Hello World from AWS Elastic Beanstalk!');
+});
 
-app.get('/',(req,res)=>{
-    res.send('hello')
-})
-
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
