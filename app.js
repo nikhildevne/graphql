@@ -123,7 +123,7 @@ const templ = `<html lang="en">
 
         <ul class="list">
             <li><strong>React.js</strong></li>
-            <li><strong>Redux</strong></li>
+            <li><strong>Redux Tollkit</strong></li>
             <li><strong>Node.js</strong></li>
             <li><strong>Express.js</strong></li>
             <li><strong>MongoDB</strong></li>
